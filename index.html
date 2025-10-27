@@ -2,28 +2,58 @@
 <html lang="sr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viber grupa</title>
     <style>
-        body {
+        /* Full-screen pozadinska slika */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+            background: url('logojpg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        /* Overlay za tamnjenje slike da tekst bude čitljiviji */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4); /* 40% crni overlay */
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+        }
+
         h2 {
-            font-size: 24px;
+            font-size: 36px;
             margin-bottom: 30px;
         }
+
         a.viber-button {
             display: inline-block;
-            margin-top: 20px;
-            font-size: 18px;
+            font-size: 20px;
             color: #ffffff;
             background-color: #665cac; /* Viber ljubičasta */
-            padding: 12px 25px;
+            padding: 15px 30px;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: bold;
+            transition: background-color 0.3s;
         }
+
         a.viber-button:hover {
             background-color: #4b3a8a;
         }
@@ -31,11 +61,14 @@
 </head>
 <body>
 
-<h2>📷 Ugasi prednju kameru</h2>
+<div class="overlay"></div>
 
-<img src="logojpg.jpg" alt="Logo">
-
-<p><a class="viber-button" href="https://scan.page/0XwEx0" target="_blank">Klik ovde za ulaz u Viber grupu</a></p>
+<div class="content">
+    <h2>📷 Ugasi prednju kameru</h2>
+    <a class="viber-button" href="https://scan.page/0XwEx0" target="_blank">
+        Klik ovde za ulaz u Viber grupu
+    </a>
+</div>
 
 </body>
 </html>
