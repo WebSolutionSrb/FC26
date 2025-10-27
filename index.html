@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viber grupa</title>
     <style>
-        /* Full-screen pozadinska slika */
         body, html {
             margin: 0;
             padding: 0;
@@ -14,12 +13,11 @@
             font-family: Arial, sans-serif;
             background: url('logojpg.jpg') no-repeat center center fixed;
             background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
+            color: #fff;
         }
 
-        /* Overlay za tamnjenje slike da tekst bude čitljiviji */
+        /* Overlay za tamnjenje slike */
         .overlay {
             position: absolute;
             top: 0;
@@ -30,7 +28,7 @@
             z-index: 1;
         }
 
-         /* Naslov gore */
+        /* Naslov gore */
         .top-text {
             position: absolute;
             top: 20px;
@@ -63,14 +61,16 @@
         a.viber-button:hover {
             background-color: #4b3a8a;
         }
+
     </style>
 </head>
 <body>
 
 <div class="overlay"></div>
 
-<div class="content">
-    <h2>📷 Ugasi prednju kameru</h2>
+<div class="top-text">Ugasi prednju kameru 📷</div>
+
+<div class="bottom-button">
     <a class="viber-button" href="https://scan.page/0XwEx0" target="_blank">
         Klik ovde za ulaz u Viber grupu
     </a>
